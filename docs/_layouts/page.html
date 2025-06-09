@@ -196,16 +196,14 @@ layout: base
           <div class ="main">
         {%- endif -%}
             <div class="grid grid--reverse">
-              {%- if page.filter == "project" -%}
-              {%- else -%}
-                <div class="col-aside d-print-none js-col-aside">
-                  {%- if page.aside -%}
-                    <aside class="page__aside js-page-aside">
-                      {%- include aside/toc.html -%}
-                    </aside>
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
+
+              <div class="col-aside d-print-none js-col-aside">
+                {%- if page.aside -%}
+                  <aside class="page__aside js-page-aside">
+                    {%- include aside/toc.html -%}
+                  </aside>
+                {%- endif -%}
+              </div>
 
               <div class="col-main cell cell--auto">
                 {%- include main/top/custom.html -%}
@@ -213,7 +211,7 @@ layout: base
                   <article itemscope itemtype="http://schema.org/Article">
                 {%- elsif _page_type == 'webpage' -%}
                   <article itemscope itemtype="http://schema.org/WebPage">
-                
+                {%- else -%}
                   <article>
                 {%- endif -%}
 
