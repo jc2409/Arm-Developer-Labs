@@ -140,10 +140,8 @@ def format_content(pathlist, docs_path):
         post.metadata["layout"] = "article"
 
         # Only set sidebar nav if it's a project‐level file (not the top-level README)
-        if path.name == "projects.md":
-            pass
-
-        post.metadata["sidebar"] = {"nav": "projects"}
+        if path.name != "projects.md":
+            post.metadata["sidebar"] = {"nav": "projects"}
 
         # Serialize back to frontmatter+content
         formatted_content = frontmatter.dumps(post)
