@@ -87,7 +87,7 @@ def convert_md(md_text: str) -> str:
 
     return replaced_md
 
-def format_content(pathlist, academic_level, docs_path):
+def format_content(pathlist, docs_path):
     """
     For each Path in pathlist:
       - Load frontmatter metadata.
@@ -142,10 +142,8 @@ def format_content(pathlist, academic_level, docs_path):
         # Only set sidebar nav if it's a project‐level file (not the top-level README)
         if path.name == "projects.md":
             pass
-        elif academic_level == "projects":
-            post.metadata["sidebar"] = {
-                "nav": academic_level,
-            }
+
+        post.metadata["sidebar"] = {"nav": "projects"}
 
         # Serialize back to frontmatter+content
         formatted_content = frontmatter.dumps(post)
@@ -179,9 +177,9 @@ def format_index():
 def main():
     clean()
     format_index()
-    format_content(projects_pathlist, "projects", docs_posts_dir)
-    format_content(projects_projects_pathlist, "projects", docs_posts_dir)
-    format_content(projects_extended_project_pathlist, "research", docs_posts_dir)
+    format_content(projects_pathlist, docs_posts_dir)
+    format_content(projects_projects_pathlist, docs_posts_dir)
+    format_content(projects_extended_project_pathlist, docs_posts_dir)
 
 if __name__ == "__main__":
     main()

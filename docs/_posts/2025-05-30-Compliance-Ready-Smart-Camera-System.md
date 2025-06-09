@@ -10,6 +10,8 @@ platform:
 publication-date: 2025-05-30
 requires-team:
 - 'Yes'
+sidebar:
+  nav: projects
 status:
 - Published
 subjects:
