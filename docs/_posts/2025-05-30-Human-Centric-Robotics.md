@@ -53,7 +53,6 @@ Potential Deliverables include:
 
 6+ months  
 Team size: 2+ participants  
-Can be extended for dissertation-level depth or research publication.
 
 ## Prerequisites
 
@@ -62,7 +61,8 @@ Can be extended for dissertation-level depth or research publication.
 - **IP/Cloud Access**:
   - Any cloud service provider with Arm-based instances (for model training or data analysis)
 
-## Benefits
+
+## Benefits 
 
 Standout project contributions will result in preferential internal referrals to Arm Talent Acquisition (with digital badges for CV building).  And we are currently discussing with national agencies the potential for funding streams for Arm Developer Labs projects, which would flow to you, not us.
 

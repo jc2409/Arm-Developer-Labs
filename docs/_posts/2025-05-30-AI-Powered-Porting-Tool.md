@@ -25,8 +25,6 @@ sw-hw:
 title: AI-Powered Package Porting Tool for the Arm Architectures
 ---
 
-<img class="image image--xl" src="/Arm-Developer-Labs/images/Research_on_arm_banner.png"/>
-
 ## Description
 
 **Why this is important?** 

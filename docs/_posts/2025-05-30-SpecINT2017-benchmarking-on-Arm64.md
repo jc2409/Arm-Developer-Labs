@@ -24,9 +24,6 @@ sw-hw:
 title: 'SpecINT2017 Benchmarking on Arm64: Evaluating Compiler and Workload Performance'
 ---
 
-<img class="image image--xl" src="/Arm-Developer-Labs/images/Research_on_arm_banner.png"/>
-
-
 ### Description
 
 **Why this is important?**

@@ -23,9 +23,6 @@ title: Optimise Performance of an Algorithm Used in High-Performance Compute Usi
   Scalable Vector Extensions (SVE / SVE2)
 ---
 
-<img class="image image--xl" src="/Arm-Developer-Labs/images/Research_on_arm_banner.png"/>
-
-
 ## Description
 
 **Why this is important?**

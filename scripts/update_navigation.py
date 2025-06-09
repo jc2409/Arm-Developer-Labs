@@ -55,8 +55,11 @@ def make_url_from_path(path: Path) -> str:
 def clear_nav():
     with open(navigation, "r") as f:
         yam_tab = yaml.safe_load(f)
-    for i in range(0,3):
-        yam_tab["projects"][i]["children"].clear()
+    yam_tab["projects"][0]["children"].clear()
+    yam_tab["projects"][1]["children"].clear()
+    yam_tab["projects"][2]["children"].clear()
+    with open(navigation, "w") as f:
+        yaml.safe_dump(yam_tab, f, sort_keys=False)
 
 def process_yml(pathlist, level: str, tab: str):
     # Load the entire navigation.yml as a Python dict
