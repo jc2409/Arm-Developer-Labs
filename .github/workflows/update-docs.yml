@@ -31,9 +31,16 @@ jobs:
           cd ..
           
       - name: Commit & push regenerated docs
+        env:
+          BRANCH: ${{ github.head_ref }} 
         run: |
           git config --global user.name  "ci-bot"
           git config --global user.email "ci-bot@users.noreply.github.com"
+      
           git add -A
+          git diff --cached --quiet && exit 0
           git commit -m "docs: auto-update"
-          git push origin HEAD:"$GITHUB_HEAD_REF"
+      
+          git fetch origin "$BRANCH"
+          git rebase origin/"$BRANCH"
+          git push origin HEAD:"$BRANCH"
